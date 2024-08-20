@@ -49,9 +49,10 @@ arrays. You can also add captions (optional)!
 
 with st.echo():
     from streamlit_image_select import image_select
-
+    st.write("ok")
     img = image_select(
         label="Select a cat",
+        width=100,
         images=[
             "images/cat1.jpeg",
             "https://bagongkia.github.io/react-image-picker/0759b6e526e3c6d72569894e58329d89.jpg",

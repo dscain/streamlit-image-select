@@ -7,7 +7,6 @@ from pathlib import Path
 from typing import Optional
 import streamlit as st
 import streamlit.components.v1 as components
-from streamlit.type_util import LabelVisibility
 
 _RELEASE = True
 
@@ -48,7 +47,6 @@ def image_select(
     width: Optional[int] = None,
     height: Optional[int] = None,
     key: str = None,
-    label_visibility: LabelVisibility = "visible",
 ):
     """Shows several images and returns the image selected by the user.
 
@@ -72,11 +70,6 @@ def image_select(
         height (int or None, optional): Set image height
             Defaults to None
         key (str, optional): The key of the component. Defaults to None.
-        label_visibility : "visible", "hidden", or "collapsed"
-            The visibility of the label. If "hidden", the label doesn't show but there
-            is still empty space for it above the widget (equivalent to label="").
-            If "collapsed", both the label and the space are removed. Default is
-            "visible".
 
     Returns:
         (any): The image selected by the user (same object and type as passed to
@@ -118,7 +111,6 @@ def image_select(
         width=width,
         height=height,
         key=key,
-        label_visibility=label_visibility,
         default=index,
     )
 
